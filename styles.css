@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../images/back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.face {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav_links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav_links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav_links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #687EDF;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav_links ul li:hover::after {
+  width: 100%;
+}
+
+.welcome-text {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.head {
+  font-size: 90px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.body-text {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.face-button {
+  display: inline-block;
+  color: #fff;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+}
+
+.face-button::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: #687EDF;
+  transition: width 0.5s ease;
+}
+
+.face-button:hover::after {
+  width: 100%;
+}
